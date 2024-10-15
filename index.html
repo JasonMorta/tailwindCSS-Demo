@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crystal Math</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Background grid pattern */
+        .bgGrid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #eef2ff 1px, transparent 1px),
+                linear-gradient(to bottom, #eef2ff 1px, transparent 1px);
+        }
+
+        /* Apply JetBrains Mono font to all elements */
+        * {
+            font-family: 'JetBrains Mono', sans-serif;
+            font-weight: 300;
+        }
+
+        /* Apply Press Start 2P font to headings */
+        h1,
+        h2,
+        h3 {
+            font-family: "Press Start 2P", system-ui;
+        }
+
+        /* Blue shadow effect for elements */
+        .blueShadow {
+            box-shadow: 0px 14px 55px rgba(106, 96, 255, 0.35);
+        }
+
+        /* Light shadow effect with hover animation */
+        .lightShadow {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Ensure text stays above the pseudo-element */
+        .lightShadow p {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Pseudo-element for light shadow animation */
+        .lightShadow::after {
+            position: absolute;
+            content: '';
+            background: navy;
+            opacity: 0.04;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 100%;
+            transition-duration: 200ms;
+            z-index: 0;
+        }
+
+        /* Move the pseudo-element on hover to create a shadow effect */
+        .lightShadow:hover::after {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+
+<body class="relative text-sm sm:text-base text-[#3929ff]">
+    <!-- Body is positioned relative, with base text size and a specific text color -->
+    <div class="absolute inset-0 bgGrid z-[-1] opacity-50"></div>
+    <!-- Full-screen absolute div with background grid, positioned behind other content -->
+    <header
+        class="sticky top-0 max-w-[1000px] mx-auto w-full p-4 sm:p-8 flex items-center justify-between gap-4 sm:gap-8">
+        <!-- Sticky header fixed at top, centered with max width, padding, flex layout for alignment -->
+        <h1 class="">Crystal Math</h1>
+        <!-- Main site title -->
+        <button
+            class="px-6 py-3 lightShadow cursor-pointer rounded-full bg-white blueShadow font-medium">
+            <!-- Button with padding, light shadow effect, pointer cursor, rounded shape, white background, blue shadow, and medium font weight -->
+            <p>Book now</p>
+        </button>
+    </header>
+    <main id="app" class="min-h-screen flex flex-col">
+        <!-- Main content area with minimum height to fill the screen and flex column layout -->
+        <section
+            class="flex flex-col max-w-[1000px] mx-auto w-full p-8 gap-8 md:gap-14 sm:py-14 md:py-20">
+            <!-- Section centered with max width, padding, and responsive gaps and padding -->
+            
+            <h2 class="font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-center">
+                Pure Math Made Crystal Clear
+            </h2>
+            <!-- Heading with bold font, responsive text sizes, and centered alignment -->
+            
+            <p class="mx-auto max-w-[800px] w-full text-center text-base sm:text-lg md:text-xl">
+                Experience the euphoric high of greater knowledge, deeper understanding and some wild math 🔥
+            </p>
+            <!-- Paragraph centered with max width, responsive text sizes -->
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 sm:w-fit sm:mx-auto py-4">
+                <!-- Grid layout with one column on small screens and two on larger, responsive gaps, auto width on small screens, and vertical padding -->
+                
+                <button
+                    class="px-6 lightShadow py-3 sm:px-10 sm:py-4 cursor-pointer rounded-full bg-white blueShadow font-medium">
+                    <!-- First button with padding, light shadow, pointer cursor, rounded shape, white background, blue shadow, medium font -->
+                    <p class="text-base sm:text-lg md:text-xl">Book now</p>
+                </button>
+                
+                <button
+                    class="px-6 lightShadow py-3 sm:px-10 sm:py-4 bg-[#3929ff] cursor-pointer rounded-full blueShadow font-medium">
+                    <!-- Second button with similar styling but with a blue background and white text -->
+                    <p class="text-base sm:text-lg md:text-xl text-white">Get in touch</p>
+                </button>
+            </div>
+            
+            <div class="flex items-center gap-4 mx-auto text-base sm:text-lg">
+                <!-- Flex container for rating with centered alignment and responsive text size -->
+                <p>4.6</p>
+                <div class="flex items-center gap-0.5 ">
+                    <!-- Star ratings container with small gaps -->
+                    <i class="fa-solid fa-star text-amber-400"></i>
+                    <i class="fa-solid fa-star text-amber-400"></i>
+                    <i class="fa-solid fa-star text-amber-400"></i>
+                    <i class="fa-solid fa-star text-amber-400 "></i>
+
+                    <div class="relative grid place-items-center">
+                        <!-- Relative positioned grid for overlaying a partially filled star -->
+                        <div
+                            class="flex justify-end w-[40%] absolute top-0 -trasnlate-y-1/2 right-0 overflow-hidden">
+                            <!-- Overlay div to create partially filled star effect -->
+                            <i class="fa-solid fa-star text-white"></i>
+                        </div>
+                        <i class="fa-solid fa-star text-amber-400"></i>
+                        <!-- Base star icon -->
+                    </div>
+                </div>
+                <p>(250+)</p>
+                <!-- Number of reviews -->
+            </div>
+
+        </section>
+    </main>
+    <footer class="p-4 sm:p-8 text-center">
+        <!-- Footer with padding and centered text -->
+        <p>Made with 💛</p>
+    </footer>
+</body>
+
+</html>
